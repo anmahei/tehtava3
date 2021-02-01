@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<title>Otsikko</title>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+</head>
+<body>
+
+<p>Lisää kaveri</p>
+<form th:object="${friend}" th:action="@{index2}" action="#" method="get">
+
+<p>Name: <input type="text" name="name" /></p>
+<input type="submit" value=Submit" />
+
+
+</form>
+
+<h1>Kaverini</h1>
+<table>
+<tr th:each="friend: ${friends}">
+<td th:text="${friend}"></td>
+</tr>
+
+</table>
+
+</body>
+</html>
